@@ -17,7 +17,7 @@ export default function HomePage() {
   const { t, currentLang } = useLanguage();
 
   const filtered = useMemo(() => {
-    return recipes.filter((r) => {
+    const result = recipes.filter((r) => {
       const matchSearch =
         search === '' ||
         r.name_id.toLowerCase().includes(search.toLowerCase()) ||
@@ -30,6 +30,14 @@ export default function HomePage() {
       const matchDiff = activeDifficulty === 'semua' || r.difficulty === activeDifficulty;
       return matchSearch && matchCategory && matchHalal && matchDiff;
     });
+
+    result.sort((a, b) => {
+      if (a.category === 'jepang' && b.category !== 'jepang') return -1;
+      if (a.category !== 'jepang' && b.category === 'jepang') return 1;
+      return 0;
+    });
+
+    return result;
   }, [search, activeCategory, halalOnly, activeDifficulty]);
 
   const handleSearch = (e) => {
