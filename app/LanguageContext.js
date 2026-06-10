@@ -5,7 +5,11 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 export const LANGUAGES = [
   { code: 'id', name: 'Indonesia', flag: '🇮🇩' },
   { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'ja', name: '日本語', flag: '🇯🇵' }
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'my', name: 'Myanmar', flag: '🇲🇲' },
+  { code: 'si', name: 'Sinhala', flag: '🇱🇰' },
+  { code: 'zh', name: 'Chinese', flag: '🇨🇳' },
+  { code: 'ne', name: 'Nepali', flag: '🇳🇵' }
 ];
 
 export const DICTIONARY = {
