@@ -18,7 +18,7 @@ export function Header() {
       <div className="container">
         <nav className={styles.siteNav}>
           <Link href="/" className={styles.siteLogo}>
-            <Image src="/logo.png" alt="Gakkou Kitchen Logo" width={40} height={40} className={styles.logoImage} />
+            <Image src="/logo.png" alt="Gakkou Kitchen Logo" width={40} height={40} className={styles.logoImage} priority />
             <div className={styles.logoText}>
               <span className={styles.logoEn}>Gakkou Kitchen</span>
               <span className={`${styles.logoJp} jp`}>学校キッチン</span>
